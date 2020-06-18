@@ -1,0 +1,39 @@
+// Place all the styles related to the games controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+table {
+  border-spacing: 8px;
+}
+tr td {
+  width: 40px;
+  height: 40px;
+  background-color: #1d8dde;
+  color: white;
+  text-align: center;
+  font-wight: bold;
+  border-radius: 2px;
+  font-size: 24px;
+}
+
+#attempt {
+  width: 420px;
+  height: 28px;	
+}
+
+#play {
+  width: 52px;
+  height: 33px;
+  background-color: #1d8dde;
+  color: white;
+  text-align: center;
+  font-wight: bold;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  font-size: 16px;
+}
+
+#play:hover {
+  background-color: #0561a3;
+}
