@@ -1,3 +1,15 @@
 <h1>Games score</h1>
-<p><%= @msg %></p>
+
+<% if @in_grid %>
+  <% if @in_dictionary %>
+     <p>Congratulations! <strong><%= @word %></strong> is a valid English word.</p> 
+     <p>Your score: <strong><%= @score = ((@word.length / @elapsed_t) * 100).round(2) %></strong></p>
+     <% else %>
+       <p>Sorry but <strong><%= @word %></strong> is not an English word.<p> 
+       <p>Your score: <strong><%= @score %></strong></p>
+     <% end %>
+    <% else %>
+     <p>Sorry, but <strong><%= @word %></strong> can’t be built out of <%= @grid.gsub(" ", ", ") %>.</p> 
+     <p>Your score: <strong><%= @score %></strong></p>
+   <% end %>
 <%= link_to "Play again", new_path %>

@@ -2,17 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-table {
-  border-spacing: 8px;
-}
-tr td {
-  width: 40px;
-  height: 40px;
+@mixin basic {
   background-color: #1d8dde;
   color: white;
   text-align: center;
-  font-wight: bold;
+  font-weight: bold;
   border-radius: 2px;
+}
+
+table {
+  border-spacing: 8px;
+}
+
+tr td {
+  @include basic;
+  width: 40px;
+  height: 40px;
   font-size: 24px;
 }
 
@@ -22,15 +27,11 @@ tr td {
 }
 
 #play {
+  @include basic;
   width: 52px;
   height: 33px;
-  background-color: #1d8dde;
-  color: white;
-  text-align: center;
-  font-wight: bold;
   border: none;
   outline: none;
-  border-radius: 2px;
   font-size: 16px;
 }
 
